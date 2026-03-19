@@ -16,6 +16,11 @@ public class Gameplay
         while (enemyHealth > 0 && playerHealth > 0)
         {
            int action = human();
+           while (action != 1 && action != 2) 
+            {
+               System.out.println("Not a valid action");
+               action = human();
+            }
            if (action == 1)
             {
                 int damage = Actions.attack();
@@ -28,17 +33,13 @@ public class Gameplay
                 playerHealth += heals;
                 System.out.println("You healed yourself for " +  heals + " health!");
             }
-            else
-            {
-                System.out.println("Not a valid action");
-            }
-            System.out.println("Player health: " + playerHealth);
-            System.out.println("Enemy health: " + enemyHealth);
+            //System.out.println("Player health: " + playerHealth);
+            //System.out.println("Enemy health: " + enemyHealth);
 
             if (enemyHealth > 0)
             {
                 int choice = (int)(Math.random() * 10) + 1;
-                if (choice > 5)
+                if (choice > 6)
                 {
                     int enemyDamage = Actions.attack();
                     playerHealth -= enemyDamage;

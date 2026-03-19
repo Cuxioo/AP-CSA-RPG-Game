@@ -12,4 +12,6 @@ public class Actions
         int heal = (int)(Math.random() * 11) + 15;
         return heal;
     }
+
+    //public static int ()
 } 
