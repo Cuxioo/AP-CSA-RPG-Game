@@ -33,13 +33,11 @@ public class Gameplay
                 playerHealth += heals;
                 System.out.println("You healed yourself for " +  heals + " health!");
             }
-            //System.out.println("Player health: " + playerHealth);
-            //System.out.println("Enemy health: " + enemyHealth);
 
             if (enemyHealth > 0)
             {
                 int choice = (int)(Math.random() * 10) + 1;
-                if (choice > 6)
+                if (choice > 4)
                 {
                     int enemyDamage = Actions.attack();
                     playerHealth -= enemyDamage;
